@@ -1,0 +1,29 @@
+.anymedia {
+  display: block;
+  color: red;
+}
+
+.second-any-media-rule {
+  display: none;
+}
+
+@media screen {
+  .any-screen-media {
+    display: block;
+    color: green;
+  }
+}
+
+@media print {
+  .any-print-media {
+    display: block;
+    color: orange;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 2700px) {
+  .any-screen-sized-media {
+    display: block;
+    color: aqua;
+  }
+}

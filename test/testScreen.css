@@ -1,0 +1,6 @@
+.screen-media {
+  display: block;
+  color: blue;
+}
+
+.second-screen-media-rule { display: none; }
