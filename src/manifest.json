@@ -4,7 +4,7 @@
    "name": "PrintScreen",
    "short_name": "PrintScreen",
    "description": "PrintScreen for Chrome. Print what you see.",
-   "version": "1.0.0",
+   "version": "1.1.0",
    "permissions": [ "tabs", "http://*/*", "https://*/*" ],
 
    "icons": {
