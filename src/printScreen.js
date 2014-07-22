@@ -22,15 +22,19 @@ function __PrintScreen__removePrintMedia() {
 
   function convertStyleSheet(stylesheet) {
     convertMedia(stylesheet.media);
-    for(var i=0; i<stylesheet.rules.length; i++) {
-      convertMedia(stylesheet.rules[i].media);
+    if(stylesheet.rules) {
+      for(var i=0; i<stylesheet.rules.length; i++) {
+        convertMedia(stylesheet.rules[i].media);
+      }
     }
   }
-
 
   var stylesheets = document.styleSheets;
   for(var i=0; i<stylesheets.length; i++) {
     convertStyleSheet(stylesheets[i]);
-  }  
+  }
+
+  // it seems to print a blank page if the DOM does not have time to rebuild
+  setTimeout(function() { window.print(); }, 1000);
 }
 __PrintScreen__removePrintMedia();
